@@ -72,6 +72,7 @@ nav a{
 body {
     display: flex;
     justify-content: center;
+    margin: 0px;
 }
 
 .main-container {
@@ -282,6 +283,7 @@ input {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .hebergement-cards .card {
