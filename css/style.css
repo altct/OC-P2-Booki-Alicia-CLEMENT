@@ -11,24 +11,38 @@
 
 /*Code étape 3(header)-14/03/24--AC*/
 header, main {
-    margin: 0 50px;
+   /* margin: 0 50px;*/
 }
 
 header{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 40px;
+    align-items: center;
 }
 
 #logo{
-    margin-top: 40px;
-    width: 110px;
-    height: auto;
+    margin-top: 25px;
+    width: 64px;
+    height: 19px;
 }
 
 nav{
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+}
+
+.lien-element{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid transparent ;
+}
+
+.lien-element:hover{
+    border-top: 2px solid blue ;
 }
 
 .bordure-bleue{
@@ -120,15 +134,16 @@ a {
 /*** Module-recherche ***/
 
 .module-recherche {
-    height: 17.5625em;
+    /*height: 17.5625em;*/
     display: flex;
     flex-direction: column;
     gap: 2.1875em;
+    margin-bottom: 2.1875em;
 }
 /* Titres */
 
 .titre-para {
-    height: 3.3125em;
+    /*height: 3.3125em;*/
     display: flex;
     flex-direction: column;
     gap: 0.5em;
@@ -147,7 +162,7 @@ h1 {
 
 .barre-de-recherche {
     width: 23.5625em;
-    height: 3.0625em;
+    /*height: 3.0625em;*/
 }
 
 .bordure-recherche {
@@ -169,6 +184,10 @@ h1 {
 
 .texte-recherche {
     display: flex;
+}
+
+::placeholder{
+    color: black;
 }
 
 input {
@@ -246,18 +265,27 @@ input {
 /* bulle-info */
 
 .bulle-info {
-    height: 0.625em;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.6875em;
-    padding-bottom: 0.625em;
+      /* height: 0.625em; */
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6875em;
+      /* padding-bottom: 0.625em;*/
 }
 
 .bulle-info p {
     margin: 0em;
 }
 
+.fa-info{
+    border: 1px solid #F2F2F2;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /****Hebergements et Populaires****/
 .hebergements-and-populaires {
@@ -395,6 +423,7 @@ input {
 
 .activites .card{
     padding: 0;
+    height: 100%;
 }
 
 .activites-cards {
@@ -426,6 +455,47 @@ input {
     flex-wrap: wrap;
 }
 
+
+/****Footer****/
+
+footer{
+    margin: 70px 20px 0 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+.footer-title {
+    margin-bottom: 15px;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    width: 30%;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.footer-link:hover {
+    color: #0065FC;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -465,7 +535,109 @@ input {
     }
 }
 
+    .activites .card{
+        height: 14.75em;
+    }
+
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+/* barre de recherche */
+
+    .barre-de-recherche {
+    width: 100%;
+    /*height: 3.0625em;*/
+}
+
+    .activity-article {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-left: 0;
+    height: 250px;
+} 
+
+
+    .filters-ul {
+        justify-content: center;
+        
+    } 
+
+    .filters-li {
+        width: 47%;
+        margin: 0 5px 10px 0;
+    }
+
+    .icon-filters {
+        padding: 20px 15px ;   
+    }    
+
+    .filters p {
+        margin: 0;
+    }
+
+    .recherche {
+        justify-content: center;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .header{
+        flex-wrap: wrap;
+        margin: 0 0 30px 0;
+        width: 100%;
+     }
+ 
+     .logo {
+       display: flex;
+       justify-content: center;
+       margin: 30px 0 20px 0;
+       width: 100%;
+     }
+ 
+ 
+     .lien-hebergements {
+         width: 50%;
+         margin: 0;
+     }
+ 
+     .lien-hebergements:hover {
+         color: #0065FC;
+         border-bottom: 0.2rem solid #0065FC;
+         border-top: none;   
+     }
+ 
+     .hebergements-article {
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+
+    .hebergements-section {
+        background-color: transparent;
+        margin-bottom: 30px;
+    }
+
+    .hebergements-title {
+        margin: 40px 0 20px 0;
+    }
+
+
+    .populaires-article {
+        display: block;
+        width: 90%;
+        margin: 0 10px 20px 12px;    
+    }
+
+    .populaires {
+        display: flex;
+    }
+
+    .populaires-title {
+        margin: 10px 20px 0 20px;
+    }
+
+    .populaires-section {
+        width: 100%;
+        height: auto;
+    }
+
 }
