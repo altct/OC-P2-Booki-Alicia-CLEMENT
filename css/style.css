@@ -45,7 +45,7 @@ nav{
     border-top: 2px solid blue ;
 }
 
-.bordure-bleue{
+.bordure-nav{
     height: 3px;
     background-color: #f2f2f2;
     margin-bottom: 40px;
@@ -66,11 +66,11 @@ nav a{
     font-weight: 600;
 }
 
-.lien-element :hover > .bordure-bleue {
+.lien-element :hover > .bordure-nav {
     background-color: #0065FC;
 }
 
-.active-lien > .bordure-bleue{
+.active-lien > .bordure-nav{
     background-color: #0065FC;
 }
 
@@ -575,15 +575,32 @@ header a {
      margin-bottom: 20px;
 }
 
-.lien{
+.lien {
     width: 100%;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
     margin-top: 20px;
 }
 
-.element {
-    padding: 0 10px;
+.lien-element{
+    width: 50%;
+    height: 2.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #F2F2F2 ;
 }
+
+.lien-element:hover{
+    border-bottom: 2px solid blue ;
+    border-top: white;
+}
+
+.bordure-nav{
+    height: 3px;
+    background-color: #f2f2f2;
+}
+
 
 .main-container {
     max-width: 23.4375em;
@@ -606,6 +623,7 @@ header a {
 .barre-de-recherche {
     width: 95%;
     height: 4.9375em;
+    margin-top: 20px;
 }
 
 input {
@@ -627,6 +645,7 @@ input {
     color: white;
     width: 49px;
     margin-left: 16px;
+    border-radius: 50%;
 }
 
 .filtres {
@@ -640,6 +659,7 @@ input {
 
 .bulle-info {
     flex-wrap: nowrap;
+    margin-top: 15px;
 }
 
 .economique, .familial, .romantique, .pepites {
