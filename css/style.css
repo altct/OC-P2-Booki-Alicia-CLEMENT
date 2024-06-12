@@ -11,7 +11,7 @@
 
 /*Code étape 3(header)-14/03/24--AC*/
 header, main {
-   /* margin: 0 50px;*/
+   margin: 0px;
 }
 
 header{
@@ -30,11 +30,11 @@ header{
 nav{
     display: flex;
     align-items: flex-start;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .lien-element{
-    height: 70%;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,11 +61,6 @@ nav a{
     padding: 0 50px;
 }
 
-.element :hover{
-    color: #0065fc;
-    font-weight: 600;
-}
-
 .lien-element :hover > .bordure-nav {
     background-color: #0065FC;
 }
@@ -74,7 +69,7 @@ nav a{
     background-color: #0065FC;
 }
 
-.active-lien > .element {
+.lien-element .element:hover {
     color: #0065FC;
 }
 
@@ -96,6 +91,9 @@ body {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875em;
 }
 
 a {
@@ -168,7 +166,7 @@ h1 {
 .bordure-recherche {
     background-color: white;
     display: flex;
-    border: 0.03125em solid #F2F2F2;
+    border: 0.03125em solid #f2f2f2;
     border-radius: 0.9375em;
 }
 
@@ -458,10 +456,6 @@ input {
 
 /****Footer****/
 
-footer{
-    margin: 70px 20px 0 20px;
-}
-
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -485,12 +479,13 @@ footer{
 .footer-nav {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .footer-link {
     margin-bottom: 10px;
-    font-weight: 500;
+    font-weight: 50px;
+    width: 100%;
 }
 
 .footer-link:hover {
@@ -563,8 +558,15 @@ footer{
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
 /** Marges générales **/
+
+.main-container {
+    padding: 0em 0em;
+    align-items: center;
+    width: 100%;
+}
+
 body {
-    margin: 0 20px;
+    margin: 0;
 }
 
 header {
@@ -602,17 +604,14 @@ header a {
 }
 
 
-.main-container {
-    max-width: 23.4375em;
-    min-width: 20em;
-    padding: 0em 0em;
-    align-items: center;
-}
-
 .module-recherche {
     padding: 0em 1.25em;;
     gap: 10%;
     min-height: 27em ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .titre-para {
@@ -621,9 +620,15 @@ header a {
 }
 
 .barre-de-recherche {
-    width: 95%;
+    display: flex;
+    align-items: center;
     height: 4.9375em;
     margin-top: 20px;
+}
+
+.texte-recherche {
+    display: flex;
+    border: none;
 }
 
 input {
@@ -631,9 +636,13 @@ input {
 }
 
 .bouton-recherche {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 3.0625em;
-    height: 3.0625em;
+    border: none;
     border-radius: 0.9375em;
+
 }
 
 .bouton-recherche p {
@@ -645,7 +654,6 @@ input {
     color: white;
     width: 49px;
     margin-left: 16px;
-    border-radius: 50%;
 }
 
 .filtres {
@@ -654,7 +662,7 @@ input {
 
 .boutons-filtre {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .bulle-info {
@@ -710,6 +718,9 @@ input {
     flex-direction: column-reverse;
 }
 
+.hebergements-and-populaires section {
+    border-radius: 0px;
+}
 .hebergements-and-populaires .hebergements{
     background-color: white;
 }
