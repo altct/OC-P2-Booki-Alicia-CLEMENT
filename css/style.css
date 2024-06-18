@@ -484,7 +484,6 @@ input {
 
 .footer-link {
     margin-bottom: 10px;
-    font-weight: 50px;
     width: 100%;
 }
 
@@ -624,6 +623,11 @@ header a {
     align-items: center;
     height: 4.9375em;
     margin-top: 20px;
+}
+
+.bordure-recherche
+{
+    margin-left: 20px;
 }
 
 .texte-recherche {
