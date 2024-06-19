@@ -89,7 +89,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    padding: 10px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -559,7 +559,6 @@ input {
 /** Marges générales **/
 
 .main-container {
-    padding: 0em 0em;
     align-items: center;
     width: 100%;
 }
