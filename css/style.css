@@ -561,6 +561,7 @@ input {
 .main-container {
     align-items: center;
     width: 100%;
+    padding: 0;
 }
 
 body {
@@ -569,6 +570,7 @@ body {
 
 header {
     flex-direction: column;
+    width: 100%;
 }
 
 header a {
@@ -615,6 +617,7 @@ header a {
 .titre-para {
     height: 79px;
     padding-bottom: 2%;
+    padding: 0;
 }
 
 .barre-de-recherche {
@@ -622,17 +625,24 @@ header a {
     align-items: center;
     height: 4.9375em;
     margin-top: 20px;
+    margin: 0 0 20px;
+    width: 100%;
 }
 
-.bordure-recherche
-{
-    margin-left: 20px;
+.bordure-recherche {
+    margin-left: 0;
+    width: 100%
 }
 
 .texte-recherche {
     display: flex;
     border: none;
+    width: 100%;
 }
+
+.texte-recherche input {
+    width: 100%;
+  }
 
 input {
     width: 100%;
@@ -661,6 +671,7 @@ input {
 
 .filtres {
     height: 10.0625em;
+    width: 100%;
 }
 
 .boutons-filtre {
@@ -766,6 +777,10 @@ input {
 }
 
 /*** Footer ***/
+
+    footer{
+        width: 100%;
+    }
 
     .footer-list {
         width: 100%;
